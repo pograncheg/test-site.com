@@ -3,10 +3,12 @@
 if ((isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest')) {
 
     session_start();
+
     require_once '../classes/Validator.php';
     require_once '../classes/UserManager.php';
 
     $userData = [];
+
     foreach ($_POST as $fieldname => $value) {
         $userData[$fieldname] = htmlentities(trim($value), ENT_QUOTES, 'UTF-8');
     }
@@ -33,7 +35,6 @@ if ((isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQ
     }
 
     $userManager = new UserManager('../config/users.json');
-
     $user = $userManager->getByLogin($userData['login']);
 
     if ($user) {

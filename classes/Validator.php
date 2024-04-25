@@ -11,15 +11,6 @@ class Validator
         $this->data = $data;
     }
 
-    // public function isEmpty() 
-    // {
-    //     foreach ($this->data as $fieldname => $value) {
-    //         if(!$this->required($value)) {
-    //             $this->emptyData[] = $fieldname;
-    //         }
-    //     }
-    // }
-
     public function validate($rules) 
     {
         foreach ($this->data as $fieldname => $value){
@@ -133,8 +124,4 @@ class Validator
         return $this->errors;
     }
 
-    // public function getEmpty()
-    // {
-    //     return $this->emptyData;
-    // }
 }

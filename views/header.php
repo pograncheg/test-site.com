@@ -8,11 +8,8 @@
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/main.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
-    <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> -->
     <script src="../js/jquery-3.7.1.min.js"></script>
-    <!-- <link href="css/style.css" rel="stylesheet"> -->
     <title><?= $title ?? 'Title' ?></title>
-
 </head>
 
 <body>
@@ -29,9 +26,6 @@
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page" href="/">Главная</a>
                             </li>
-                            <!-- <li class="nav-item">
-                                <a class="nav-link" href="/views/contact.php">Контакты</a>
-                            </li> -->
                             <?php if (isset($_SESSION['user'])): ?>
                             <li class="nav-item">
                                 <a class="nav-link" href="/views/profile.php">Профиль</a>
@@ -45,15 +39,8 @@
                             <?php else: ?>
                                 <li><a class="nav-link" href="../views/register.php">Регистрация</a></li>
                                 <li><a class="nav-link" href="../views/login.php">Вход</a></li>
-<!-- 
-                                <li><a class="nav-link" href="register.tpl.php">Регистрация</a></li>
-                                <li><a class="nav-link" href="login.tpl.php">Вход</a></li> -->
                             <?php endif; ?>
                         </ul>
-                        <!-- <form class="d-flex" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск">
-                            <button class="btn btn-outline-success" type="submit">Поиск</button>
-                        </form> -->
                     </div>
                 </div>
             </nav>

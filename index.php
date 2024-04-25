@@ -3,7 +3,6 @@
     require "views/header.php";
 ?>
 
-
 <main class="main py-3">
 
     <div class="container">
@@ -16,10 +15,10 @@
     </div>
 </main>
 
-
 <?php  
     require "views/footer.php"; 
 ?>
+
 </div>
 </body>
 

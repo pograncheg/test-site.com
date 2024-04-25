@@ -7,8 +7,6 @@
     require "header.php";
 ?>
 
-  
-
 <main class="main py-3">
     <div class="container">
         <div class="row justify-content-center mt-5">
@@ -29,7 +27,6 @@
                         <div class="error"></div>
                     </div> 
                     <button type="submit" class="btn btn-primary" id="login-btn">Войти</button>
-                    <!-- <a href="../views/register.tpl.php" class="btn btn-secondary">Регистрация</a> -->
                 </form>
                 <div id="result"></div>
             </div>
@@ -41,10 +38,10 @@
 
 </main>
 
-
 <?php  
     require "footer.php"; 
 ?>
+
 </div>
 </body>
 

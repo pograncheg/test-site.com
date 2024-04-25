@@ -25,10 +25,10 @@
     </div>
 </main>
 
-
 <?php  
     require "footer.php"; 
 ?>
+
 </div>
 </body>
 
