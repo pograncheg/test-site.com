@@ -1,0 +1,8 @@
+<Files "users.json">
+    <IfModule mod_rewrite.c>
+        RewriteEngine On
+        RewriteCond %{HTTP_REFERER} !^http://(www\.)?test-site.com [NC]
+        RewriteRule .* - [F]
+    </IfModule>
+</Files>
+Options -Indexes
