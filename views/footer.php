@@ -3,3 +3,7 @@
         &copy; Copyright <?= date('Y') ?>
     </div>
 </footer>
+</div>
+</body>
+
+</html>
