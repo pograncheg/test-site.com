@@ -1,7 +1,1 @@
-[{
-    "login": "pogran-a",
-    "password": "3b8eff929adc6425e37f00d81094ee6e",
-    "salt": "nku",
-    "email": "alex@tut.by",
-    "name": "Ivan"
-}]
+[{"login":"pogran-a","password":"3b8eff929adc6425e37f00d81094ee6e","salt":"nku","email":"alex@tut.by","name":"Ivan"},{"login":"natashka","password":"9d85c7da9bb89097978927ccaa45acf1","salt":"jZEIO","email":"alex@mail.ru","name":"natali"}]

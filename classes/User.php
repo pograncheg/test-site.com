@@ -2,14 +2,14 @@
 
 class User
 {   
-    private $login;
-    private $password;
-    private $salt;
-    private $email;
-    private $name;
+    private string $login;
+    private string $password;
+    private string $salt;
+    private string $email;
+    private string $name;
 
 
-    public function __construct($userData)
+    public function __construct(array $userData)
     {
         $this->login = $userData['login'];
         $this->password = $userData['password'];

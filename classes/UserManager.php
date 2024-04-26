@@ -4,9 +4,9 @@ require_once 'User.php';
 
 class UserManager
 {
-    private $file;
+    private string $file;
 
-    public function __construct($file)
+    public function __construct(string $file)
     {
         $this->file = $file;
     }
@@ -23,7 +23,7 @@ class UserManager
         return $users;
     }
 
-    public function getByLogin($login)
+    public function getByLogin(string $login)
     {
         $users = $this->getAllUsers();
         foreach ($users as $user) {
@@ -40,14 +40,14 @@ class UserManager
         return false;
     }
 
-    public function create($user)
+    public function create(User $user)
     {
         $users = $this->getAllUsers();
         $users[] = $user;
         $this->save($users);
     }
 
-    public function update($user)
+    public function update(User $user)
     {
         $users = $this->getAllUsers();
         foreach ($users as &$u) {
@@ -59,7 +59,7 @@ class UserManager
         $this->save($users);
     }
 
-    public function delete($login)
+    public function delete(string $login)
     {
         $users = $this->getAllUsers();
         $users = array_filter($users, function ($user) use ($login) {
@@ -68,7 +68,7 @@ class UserManager
         $this->save($users);
     }
 
-    private function save($users) 
+    private function save(array $users) 
     {
         $data = array_map(function ($user) {
             return [
