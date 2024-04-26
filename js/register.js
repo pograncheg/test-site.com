@@ -7,7 +7,6 @@ $("document").ready(function() {
 
         $(".error").html('');
 
-        // $.post("../controllers/register.php", $(this).serialize(), function (response) {
         $.post("../handlers/register-handler.php", $(this).serialize(), function (response) {
             console.log(response['status']);
             if(!response['status']){
