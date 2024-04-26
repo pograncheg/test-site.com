@@ -74,7 +74,7 @@ if ((isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQ
 
         $newUser = new User($user);
         $userManager = new UserManager('../config/users.json');
-        $userManager->getAllUsers();
+        // $userManager->getAllUsers();
         $userManager->create($newUser);
 
         if ($userManager->getByLogin($userData['login'])) {

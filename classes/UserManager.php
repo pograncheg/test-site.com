@@ -50,9 +50,9 @@ class UserManager
     public function update(User $user)
     {
         $users = $this->getAllUsers();
-        foreach ($users as &$u) {
+        foreach ($users as $key => $u) {
             if ($u->getLogin() == $user->getLogin()) {
-                $u = $user;
+                $users[$key] = $user;
                 break;
             }
         }

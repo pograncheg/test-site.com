@@ -34,7 +34,7 @@ class Validator
         foreach ($fieldData['rules'] as $rule=>$ruleValue) {
             switch($rule) {
                 case 'min':
-                    if (!$this->min((int)$fieldData['value'], (int)$ruleValue)){
+                    if (!$this->min($fieldData['value'], (int)$ruleValue)){
                         $this->errors[$fieldData['fieldname']][] = "Введите не меньше $ruleValue символов";
                     }
                     break;
@@ -72,7 +72,7 @@ class Validator
         }
     }
 
-    public function min(int $value, int $ruleValue)
+    public function min(string $value, int $ruleValue)
     {
         return mb_strlen($value, 'UTF-8') >= $ruleValue;
     }
